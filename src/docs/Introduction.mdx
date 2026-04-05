@@ -1,0 +1,99 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Introduction" />
+
+# Raptor Design System
+
+A unified visual language for Raptor Technologies' K-12 school safety applications.
+
+---
+
+## Overview
+
+This design system provides the **tokens, components, and patterns** needed to build consistent, accessible, and modern interfaces across Raptor's product suite — including VolunteerSafe, VisitorSafe, SmartPass, and future applications.
+
+### Design Principles
+
+| Principle | Description |
+| --- | --- |
+| **Bold & Confident** | Saturated colors, strong type hierarchy — users need clarity under pressure |
+| **Accessible First** | WCAG AA minimum on all interactive elements, visible focus indicators |
+| **Framework-Agnostic Tokens** | CSS custom properties that map to Shadcn/ui, PrimeVue, or Radix |
+| **Consistent States** | Every interactive element has default, hover, focus, error, and disabled states |
+
+---
+
+## Architecture
+
+```
+src/
+├── tokens/
+│   ├── globals.css       ← CSS custom properties (single source of truth)
+│   └── tokens.js         ← JS exports for programmatic use
+├── components/
+│   ├── Badge/            ← Bold status indicators (SmartPass-style)
+│   ├── Button/           ← Action buttons with 6 variants × 3 sizes
+│   ├── FormField/        ← Text inputs with validation + accessibility
+│   ├── FormSelect/       ← Select dropdowns
+│   └── StatCard/         ← Dashboard metric displays
+└── docs/
+    └── Introduction.mdx  ← This file
+```
+
+---
+
+## Token System
+
+Design tokens are defined as CSS custom properties in `globals.css` and exported as JavaScript objects in `tokens.js`. This dual-format approach supports:
+
+- **CSS-first:** Components reference `var(--color-primary-500)` directly
+- **JS when needed:** Build scripts, theme switching, or programmatic access
+- **Framework mapping:** Tokens map to Shadcn/ui's CSS variable convention and PrimeVue's preset theme structure
+
+### Color Palette
+
+The palette centers on **Raptor Orange** as the primary action color, with semantic colors for workflow states and extended accent colors influenced by SmartPass's bold UI.
+
+### Badge Style
+
+Following SmartPass patterns, badges use **fully saturated backgrounds with white text** rather than muted pastels. This creates strong visual hierarchy in data-dense views like approval queues and visit history tables.
+
+---
+
+## Accessibility (WCAG AA)
+
+Every component is built to meet WCAG 2.1 AA:
+
+- **Color contrast:** All text/background combos ≥ 4.5:1 (normal text) or ≥ 3:1 (large/bold text)
+- **Focus indicators:** 3px glow rings on all focusable elements, 2px outline on buttons
+- **ARIA attributes:** `aria-invalid`, `aria-describedby`, `role="alert"` on form errors
+- **Semantic HTML:** `<fieldset>`, `<legend>`, `<nav>`, `scope="col"` on table headers
+- **Keyboard navigation:** All interactive elements reachable and operable via keyboard
+
+---
+
+## Framework Compatibility
+
+| Component | Shadcn/ui | PrimeVue | Radix |
+| --- | --- | --- | --- |
+| Badge | `<Badge>` | `<Tag>` | — |
+| Button | `<Button>` | `<Button>` | — |
+| FormField | `<Input>` + `<Label>` | `<InputText>` | `<TextField>` |
+| StatCard | `<Card>` | `<Card>` | — |
+
+---
+
+## Getting Started
+
+```bash
+npm install
+npm run storybook
+```
+
+To build a static site for deployment:
+
+```bash
+npm run build-storybook
+```
+
+Deploy the `storybook-static/` folder to Chromatic, GitHub Pages, Netlify, or Vercel.

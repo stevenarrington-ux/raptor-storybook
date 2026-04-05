@@ -1,0 +1,101 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Foundations/Design Tokens" />
+
+# Design Tokens
+
+Design tokens are the atomic values that define Raptor's visual language. They live in two places:
+
+- **`globals.css`** — CSS custom properties for direct use in components
+- **`tokens.js`** — JavaScript exports for programmatic access
+
+---
+
+## Colors
+
+### Primary — Raptor Orange
+
+The primary palette drives all action states (buttons, links, focus rings, active navigation).
+
+| Token | Hex | Usage |
+| --- | --- | --- |
+| `--color-primary-50` | `#FFF7ED` | Hover backgrounds, subtle fills |
+| `--color-primary-100` | `#FFEDD5` | Selected row backgrounds |
+| `--color-primary-200` | `#FED7AA` | Text selection highlight |
+| `--color-primary-300` | `#FDBA74` | — |
+| `--color-primary-400` | `#FB923C` | Active nav text, outline button border |
+| `--color-primary-500` | `#F97316` | **Primary buttons, badge fills, focus rings** |
+| `--color-primary-600` | `#EA580C` | Button hover state |
+| `--color-primary-700` | `#C2410C` | Button active/pressed state |
+| `--color-primary-800` | `#9A3412` | High-contrast text on primary-50 |
+
+### Semantic
+
+| Token | Hex | Usage |
+| --- | --- | --- |
+| `--color-success-500` | `#16A34A` | Approved status, save confirmation |
+| `--color-danger-500` | `#DC2626` | Denied status, errors, delete actions |
+| `--color-warning-500` | `#D97706` | Expiring status, renewal reminders |
+| `--color-info-500` | `#2563EB` | Background check, informational states |
+
+### Extended — SmartPass Accents
+
+| Token | Hex | Usage |
+| --- | --- | --- |
+| `--color-navy-500` | `#312E81` | Duration badges, office locations |
+| `--color-magenta-500` | `#C026D3` | Nurse/health room tags |
+| `--color-teal-500` | `#0D9488` | Library/activity tags |
+
+---
+
+## Typography
+
+| Scale | Size | Weight | Family | Usage |
+| --- | --- | --- | --- | --- |
+| Display | 2.25rem | 800 | Plus Jakarta Sans | Page titles, hero numbers |
+| Heading | 1.5rem | 700 | Plus Jakarta Sans | Section headers |
+| Subheading | 1.125rem | 600 | Plus Jakarta Sans | Card headers |
+| Body | 0.9375rem | 400 | DM Sans | Form inputs, paragraphs |
+| Label | 0.8125rem | 600 | DM Sans | Form labels, nav items |
+| Caption | 0.75rem | 400 | DM Sans | Hints, metadata |
+| Small | 0.625rem | 500 | DM Sans | Swatch labels, footnotes |
+
+---
+
+## Spacing
+
+Based on a **4px grid** (0.25rem):
+
+| Token | Value | Pixels |
+| --- | --- | --- |
+| `--space-1` | 0.25rem | 4px |
+| `--space-2` | 0.5rem | 8px |
+| `--space-3` | 0.75rem | 12px |
+| `--space-4` | 1rem | 16px |
+| `--space-6` | 1.5rem | 24px |
+| `--space-8` | 2rem | 32px |
+
+---
+
+## Border Radius
+
+| Token | Value | Usage |
+| --- | --- | --- |
+| `--radius-sm` | 0.375rem | Small badges, mini buttons |
+| `--radius-md` | 0.625rem | Inputs, selects |
+| `--radius-lg` | 0.875rem | Buttons, nav items |
+| `--radius-xl` | 1.125rem | Cards, panels |
+| `--radius-2xl` | 1.5rem | Large cards, modals |
+| `--radius-full` | 9999px | Badges, avatars |
+
+---
+
+## Shadows
+
+| Token | Usage |
+| --- | --- |
+| `--shadow-sm` | Subtle lift on cards at rest |
+| `--shadow-md` | Elevated cards, dropdowns |
+| `--shadow-lg` | Modals, toasts |
+| `--shadow-focus` | Orange focus ring (inputs, buttons) |
+| `--shadow-focus-danger` | Red focus ring (error state inputs) |

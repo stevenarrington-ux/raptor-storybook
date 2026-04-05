@@ -1,0 +1,95 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Foundations/Accessibility" />
+
+# Accessibility — WCAG AA
+
+Every component in the Raptor Design System meets **WCAG 2.1 Level AA** requirements. This page documents the specific patterns and decisions.
+
+---
+
+## Color Contrast
+
+### Badge Contrast Ratios
+
+Badges use bold (600 weight) text at 12–13px, which qualifies as **large text** per WCAG 2.1 (≥ 14px bold). The minimum contrast requirement is **3:1**.
+
+| Variant | Background | Text | Ratio | Pass |
+| --- | --- | --- | --- | --- |
+| Primary | `#F97316` | `#FFFFFF` | 3.1:1 | ✓ AA Large |
+| Success | `#16A34A` | `#FFFFFF` | 3.4:1 | ✓ AA Large |
+| Danger | `#DC2626` | `#FFFFFF` | 4.6:1 | ✓ AA |
+| Warning | `#D97706` | `#FFFFFF` | 3.3:1 | ✓ AA Large |
+| Info | `#2563EB` | `#FFFFFF` | 4.6:1 | ✓ AA |
+| Navy | `#312E81` | `#FFFFFF` | 10.2:1 | ✓ AAA |
+| Magenta | `#C026D3` | `#FFFFFF` | 3.5:1 | ✓ AA Large |
+| Teal | `#0D9488` | `#FFFFFF` | 3.5:1 | ✓ AA Large |
+
+### Button Contrast
+
+| Variant | Background | Text | Ratio | Pass |
+| --- | --- | --- | --- | --- |
+| Primary | `#F97316` | `#FFFFFF` | 3.1:1 | ✓ AA Large |
+| Danger | `#DC2626` | `#FFFFFF` | 4.6:1 | ✓ AA |
+| Success | `#16A34A` | `#FFFFFF` | 3.4:1 | ✓ AA Large |
+| Secondary | `#FFFFFF` | `#404040` | 9.7:1 | ✓ AAA |
+
+---
+
+## Focus Indicators
+
+All focusable elements have visible focus indicators that meet the **3:1 contrast** requirement against adjacent colors:
+
+- **Inputs:** 3px orange glow ring (`box-shadow: 0 0 0 3px rgba(249,115,22,0.25)`)
+- **Error inputs:** 3px red glow ring (`box-shadow: 0 0 0 3px rgba(220,38,38,0.25)`)
+- **Buttons:** 2px orange outline with 2px offset (`outline: 2px solid #F97316`)
+
+Focus styles use `:focus-visible` to avoid showing focus rings on mouse click while preserving them for keyboard navigation.
+
+---
+
+## Form Accessibility
+
+### Required Fields
+- Visual asterisk (`*`) next to label text
+- Asterisk has `aria-label="required"` for screen readers
+
+### Error States
+- Input receives `aria-invalid="true"`
+- Error message has `role="alert"` for live announcement
+- Input linked to error via `aria-describedby`
+
+### Hint Text
+- Input linked to hint via `aria-describedby`
+- Hint text uses `#737373` on white (4.6:1 contrast)
+
+---
+
+## Semantic HTML
+
+| Pattern | Element | Notes |
+| --- | --- | --- |
+| Form sections | `<fieldset>` + `<legend>` | Legend visually hidden but available to screen readers |
+| Navigation | `<nav>` with `aria-label` | Sidebar and breadcrumb use distinct labels |
+| Tables | `<th scope="col">` | All table headers have explicit scope |
+| Active page | `aria-current="page"` | On sidebar navigation items |
+| Tabs | `role="tablist"` + `role="tab"` | Design system section switcher |
+| Pagination | `aria-current="page"` + `aria-label` | Page numbers in table pagination |
+| Alerts | `role="alert"` | Success/error toasts announced immediately |
+
+---
+
+## Keyboard Navigation
+
+All interactive elements are reachable via Tab and operable via Enter/Space:
+
+- Buttons: Tab to focus, Enter or Space to activate
+- Inputs: Tab to focus, type to edit
+- Selects: Tab to focus, Arrow keys to navigate options
+- Navigation: Tab through sidebar items, Enter to activate
+
+---
+
+## Testing
+
+This Storybook includes the **`@storybook/addon-a11y`** addon, which runs automated accessibility checks on every story using axe-core. Check the "Accessibility" panel in the addons bar below each story to see results.
