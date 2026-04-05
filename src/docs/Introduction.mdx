@@ -14,12 +14,32 @@ This design system provides the **tokens, components, and patterns** needed to b
 
 ### Design Principles
 
-| Principle | Description |
-| --- | --- |
-| **Bold & Confident** | Saturated colors, strong type hierarchy — users need clarity under pressure |
-| **Accessible First** | WCAG AA minimum on all interactive elements, visible focus indicators |
-| **Framework-Agnostic Tokens** | CSS custom properties that map to Shadcn/ui, PrimeVue, or Radix |
-| **Consistent States** | Every interactive element has default, hover, focus, error, and disabled states |
+<table>
+  <thead>
+    <tr>
+      <th>Principle</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Bold & Confident</strong></td>
+      <td>Saturated colors, strong type hierarchy — users need clarity under pressure</td>
+    </tr>
+    <tr>
+      <td><strong>Accessible First</strong></td>
+      <td>WCAG AA minimum on all interactive elements, visible focus indicators</td>
+    </tr>
+    <tr>
+      <td><strong>Framework-Agnostic Tokens</strong></td>
+      <td>CSS custom properties that map to Shadcn/ui, PrimeVue, or Radix</td>
+    </tr>
+    <tr>
+      <td><strong>Consistent States</strong></td>
+      <td>Every interactive element has default, hover, focus, error, and disabled states</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -74,26 +94,39 @@ Every component is built to meet WCAG 2.1 AA:
 
 ## Framework Compatibility
 
-| Component | Shadcn/ui | PrimeVue | Radix |
-| --- | --- | --- | --- |
-| Badge | `<Badge>` | `<Tag>` | — |
-| Button | `<Button>` | `<Button>` | — |
-| FormField | `<Input>` + `<Label>` | `<InputText>` | `<TextField>` |
-| StatCard | `<Card>` | `<Card>` | — |
-
----
-
-## Getting Started
-
-```bash
-npm install
-npm run storybook
-```
-
-To build a static site for deployment:
-
-```bash
-npm run build-storybook
-```
-
-Deploy the `storybook-static/` folder to Chromatic, GitHub Pages, Netlify, or Vercel.
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Shadcn/ui</th>
+      <th>PrimeVue</th>
+      <th>Radix</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Badge</td>
+      <td><code>&lt;Badge&gt;</code></td>
+      <td><code>&lt;Tag&gt;</code></td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>Button</td>
+      <td><code>&lt;Button&gt;</code></td>
+      <td><code>&lt;Button&gt;</code></td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>FormField</td>
+      <td><code>&lt;Input&gt;</code> + <code>&lt;Label&gt;</code></td>
+      <td><code>&lt;InputText&gt;</code></td>
+      <td><code>&lt;TextField&gt;</code></td>
+    </tr>
+    <tr>
+      <td>StatCard</td>
+      <td><code>&lt;Card&gt;</code></td>
+      <td><code>&lt;Card&gt;</code></td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
