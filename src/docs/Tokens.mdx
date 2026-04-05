@@ -17,48 +17,88 @@ Design tokens are the atomic values that define Raptor's visual language. They l
 
 The primary palette drives all action states (buttons, links, focus rings, active navigation).
 
-| Token | Hex | Usage |
-| --- | --- | --- |
-| `--color-primary-50` | `#FFF7ED` | Hover backgrounds, subtle fills |
-| `--color-primary-100` | `#FFEDD5` | Selected row backgrounds |
-| `--color-primary-200` | `#FED7AA` | Text selection highlight |
-| `--color-primary-300` | `#FDBA74` | — |
-| `--color-primary-400` | `#FB923C` | Active nav text, outline button border |
-| `--color-primary-500` | `#F97316` | **Primary buttons, badge fills, focus rings** |
-| `--color-primary-600` | `#EA580C` | Button hover state |
-| `--color-primary-700` | `#C2410C` | Button active/pressed state |
-| `--color-primary-800` | `#9A3412` | High-contrast text on primary-50 |
+<table style={{width: '100%', borderCollapse: 'collapse', fontSize: '0.875rem'}}>
+  <thead>
+    <tr style={{borderBottom: '2px solid #E5E5E5'}}>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Token</th>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Hex</th>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Swatch</th>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--color-primary-50</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>#FFF7ED</td><td style={{padding: '8px 12px'}}><div style={{width: 40, height: 24, borderRadius: 4, background: '#FFF7ED', border: '1px solid rgba(0,0,0,0.08)'}}/></td><td style={{padding: '8px 12px', color: '#525252'}}>Hover backgrounds, subtle fills</td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--color-primary-100</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>#FFEDD5</td><td style={{padding: '8px 12px'}}><div style={{width: 40, height: 24, borderRadius: 4, background: '#FFEDD5', border: '1px solid rgba(0,0,0,0.08)'}}/></td><td style={{padding: '8px 12px', color: '#525252'}}>Selected row backgrounds</td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--color-primary-200</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>#FED7AA</td><td style={{padding: '8px 12px'}}><div style={{width: 40, height: 24, borderRadius: 4, background: '#FED7AA', border: '1px solid rgba(0,0,0,0.08)'}}/></td><td style={{padding: '8px 12px', color: '#525252'}}>Text selection highlight</td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--color-primary-400</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>#FB923C</td><td style={{padding: '8px 12px'}}><div style={{width: 40, height: 24, borderRadius: 4, background: '#FB923C', border: '1px solid rgba(0,0,0,0.08)'}}/></td><td style={{padding: '8px 12px', color: '#525252'}}>Active nav text, outline borders</td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5', fontWeight: 600}}><td style={{padding: '8px 12px'}}><code>--color-primary-500</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>#F97316</td><td style={{padding: '8px 12px'}}><div style={{width: 40, height: 24, borderRadius: 4, background: '#F97316', border: '1px solid rgba(0,0,0,0.08)'}}/></td><td style={{padding: '8px 12px', color: '#171717'}}>Primary buttons, badge fills, focus rings</td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--color-primary-600</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>#EA580C</td><td style={{padding: '8px 12px'}}><div style={{width: 40, height: 24, borderRadius: 4, background: '#EA580C', border: '1px solid rgba(0,0,0,0.08)'}}/></td><td style={{padding: '8px 12px', color: '#525252'}}>Button hover state</td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--color-primary-700</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>#C2410C</td><td style={{padding: '8px 12px'}}><div style={{width: 40, height: 24, borderRadius: 4, background: '#C2410C', border: '1px solid rgba(0,0,0,0.08)'}}/></td><td style={{padding: '8px 12px', color: '#525252'}}>Button active/pressed state</td></tr>
+    <tr><td style={{padding: '8px 12px'}}><code>--color-primary-800</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>#9A3412</td><td style={{padding: '8px 12px'}}><div style={{width: 40, height: 24, borderRadius: 4, background: '#9A3412', border: '1px solid rgba(0,0,0,0.08)'}}/></td><td style={{padding: '8px 12px', color: '#525252'}}>High-contrast text on primary-50</td></tr>
+  </tbody>
+</table>
 
 ### Semantic
 
-| Token | Hex | Usage |
-| --- | --- | --- |
-| `--color-success-500` | `#16A34A` | Approved status, save confirmation |
-| `--color-danger-500` | `#DC2626` | Denied status, errors, delete actions |
-| `--color-warning-500` | `#D97706` | Expiring status, renewal reminders |
-| `--color-info-500` | `#2563EB` | Background check, informational states |
+<table style={{width: '100%', borderCollapse: 'collapse', fontSize: '0.875rem'}}>
+  <thead>
+    <tr style={{borderBottom: '2px solid #E5E5E5'}}>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Token</th>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Hex</th>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Swatch</th>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--color-success-500</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>#16A34A</td><td style={{padding: '8px 12px'}}><div style={{width: 40, height: 24, borderRadius: 4, background: '#16A34A'}}/></td><td style={{padding: '8px 12px', color: '#525252'}}>Approved status, save confirmation</td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--color-danger-500</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>#DC2626</td><td style={{padding: '8px 12px'}}><div style={{width: 40, height: 24, borderRadius: 4, background: '#DC2626'}}/></td><td style={{padding: '8px 12px', color: '#525252'}}>Denied status, errors, delete actions</td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--color-warning-500</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>#D97706</td><td style={{padding: '8px 12px'}}><div style={{width: 40, height: 24, borderRadius: 4, background: '#D97706'}}/></td><td style={{padding: '8px 12px', color: '#525252'}}>Expiring status, renewal reminders</td></tr>
+    <tr><td style={{padding: '8px 12px'}}><code>--color-info-500</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>#2563EB</td><td style={{padding: '8px 12px'}}><div style={{width: 40, height: 24, borderRadius: 4, background: '#2563EB'}}/></td><td style={{padding: '8px 12px', color: '#525252'}}>Background check, informational states</td></tr>
+  </tbody>
+</table>
 
 ### Extended — SmartPass Accents
 
-| Token | Hex | Usage |
-| --- | --- | --- |
-| `--color-navy-500` | `#312E81` | Duration badges, office locations |
-| `--color-magenta-500` | `#C026D3` | Nurse/health room tags |
-| `--color-teal-500` | `#0D9488` | Library/activity tags |
+<table style={{width: '100%', borderCollapse: 'collapse', fontSize: '0.875rem'}}>
+  <thead>
+    <tr style={{borderBottom: '2px solid #E5E5E5'}}>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Token</th>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Hex</th>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Swatch</th>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--color-navy-500</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>#312E81</td><td style={{padding: '8px 12px'}}><div style={{width: 40, height: 24, borderRadius: 4, background: '#312E81'}}/></td><td style={{padding: '8px 12px', color: '#525252'}}>Duration badges, office locations</td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--color-magenta-500</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>#C026D3</td><td style={{padding: '8px 12px'}}><div style={{width: 40, height: 24, borderRadius: 4, background: '#C026D3'}}/></td><td style={{padding: '8px 12px', color: '#525252'}}>Nurse/health room tags</td></tr>
+    <tr><td style={{padding: '8px 12px'}}><code>--color-teal-500</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>#0D9488</td><td style={{padding: '8px 12px'}}><div style={{width: 40, height: 24, borderRadius: 4, background: '#0D9488'}}/></td><td style={{padding: '8px 12px', color: '#525252'}}>Library/activity tags</td></tr>
+  </tbody>
+</table>
 
 ---
 
 ## Typography
 
-| Scale | Size | Weight | Family | Usage |
-| --- | --- | --- | --- | --- |
-| Display | 2.25rem | 800 | Plus Jakarta Sans | Page titles, hero numbers |
-| Heading | 1.5rem | 700 | Plus Jakarta Sans | Section headers |
-| Subheading | 1.125rem | 600 | Plus Jakarta Sans | Card headers |
-| Body | 0.9375rem | 400 | DM Sans | Form inputs, paragraphs |
-| Label | 0.8125rem | 600 | DM Sans | Form labels, nav items |
-| Caption | 0.75rem | 400 | DM Sans | Hints, metadata |
-| Small | 0.625rem | 500 | DM Sans | Swatch labels, footnotes |
+<table style={{width: '100%', borderCollapse: 'collapse', fontSize: '0.875rem'}}>
+  <thead>
+    <tr style={{borderBottom: '2px solid #E5E5E5'}}>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Scale</th>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Size</th>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Weight</th>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Family</th>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px', fontWeight: 600}}>Display</td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>2.25rem</td><td style={{padding: '8px 12px'}}>800</td><td style={{padding: '8px 12px'}}>Plus Jakarta Sans</td><td style={{padding: '8px 12px', color: '#525252'}}>Page titles, hero numbers</td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px', fontWeight: 600}}>Heading</td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>1.5rem</td><td style={{padding: '8px 12px'}}>700</td><td style={{padding: '8px 12px'}}>Plus Jakarta Sans</td><td style={{padding: '8px 12px', color: '#525252'}}>Section headers</td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px', fontWeight: 600}}>Subheading</td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>1.125rem</td><td style={{padding: '8px 12px'}}>600</td><td style={{padding: '8px 12px'}}>Plus Jakarta Sans</td><td style={{padding: '8px 12px', color: '#525252'}}>Card headers</td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px', fontWeight: 600}}>Body</td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>0.9375rem</td><td style={{padding: '8px 12px'}}>400</td><td style={{padding: '8px 12px'}}>DM Sans</td><td style={{padding: '8px 12px', color: '#525252'}}>Form inputs, paragraphs</td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px', fontWeight: 600}}>Label</td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>0.8125rem</td><td style={{padding: '8px 12px'}}>600</td><td style={{padding: '8px 12px'}}>DM Sans</td><td style={{padding: '8px 12px', color: '#525252'}}>Form labels, nav items</td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px', fontWeight: 600}}>Caption</td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>0.75rem</td><td style={{padding: '8px 12px'}}>400</td><td style={{padding: '8px 12px'}}>DM Sans</td><td style={{padding: '8px 12px', color: '#525252'}}>Hints, metadata</td></tr>
+    <tr><td style={{padding: '8px 12px', fontWeight: 600}}>Small</td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>0.625rem</td><td style={{padding: '8px 12px'}}>500</td><td style={{padding: '8px 12px'}}>DM Sans</td><td style={{padding: '8px 12px', color: '#525252'}}>Swatch labels, footnotes</td></tr>
+  </tbody>
+</table>
 
 ---
 
@@ -66,36 +106,44 @@ The primary palette drives all action states (buttons, links, focus rings, activ
 
 Based on a **4px grid** (0.25rem):
 
-| Token | Value | Pixels |
-| --- | --- | --- |
-| `--space-1` | 0.25rem | 4px |
-| `--space-2` | 0.5rem | 8px |
-| `--space-3` | 0.75rem | 12px |
-| `--space-4` | 1rem | 16px |
-| `--space-6` | 1.5rem | 24px |
-| `--space-8` | 2rem | 32px |
+<table style={{borderCollapse: 'collapse', fontSize: '0.875rem'}}>
+  <thead>
+    <tr style={{borderBottom: '2px solid #E5E5E5'}}>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Token</th>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Value</th>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Pixels</th>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Visual</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--space-1</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>0.25rem</td><td style={{padding: '8px 12px'}}>4px</td><td style={{padding: '8px 12px'}}><div style={{width: 4, height: 12, borderRadius: 2, background: '#FB923C', opacity: 0.7}}/></td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--space-2</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>0.5rem</td><td style={{padding: '8px 12px'}}>8px</td><td style={{padding: '8px 12px'}}><div style={{width: 8, height: 12, borderRadius: 2, background: '#FB923C', opacity: 0.7}}/></td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--space-3</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>0.75rem</td><td style={{padding: '8px 12px'}}>12px</td><td style={{padding: '8px 12px'}}><div style={{width: 12, height: 12, borderRadius: 2, background: '#FB923C', opacity: 0.7}}/></td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--space-4</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>1rem</td><td style={{padding: '8px 12px'}}>16px</td><td style={{padding: '8px 12px'}}><div style={{width: 16, height: 12, borderRadius: 2, background: '#FB923C', opacity: 0.7}}/></td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--space-6</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>1.5rem</td><td style={{padding: '8px 12px'}}>24px</td><td style={{padding: '8px 12px'}}><div style={{width: 24, height: 12, borderRadius: 2, background: '#FB923C', opacity: 0.7}}/></td></tr>
+    <tr><td style={{padding: '8px 12px'}}><code>--space-8</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>2rem</td><td style={{padding: '8px 12px'}}>32px</td><td style={{padding: '8px 12px'}}><div style={{width: 32, height: 12, borderRadius: 2, background: '#FB923C', opacity: 0.7}}/></td></tr>
+  </tbody>
+</table>
 
 ---
 
 ## Border Radius
 
-| Token | Value | Usage |
-| --- | --- | --- |
-| `--radius-sm` | 0.375rem | Small badges, mini buttons |
-| `--radius-md` | 0.625rem | Inputs, selects |
-| `--radius-lg` | 0.875rem | Buttons, nav items |
-| `--radius-xl` | 1.125rem | Cards, panels |
-| `--radius-2xl` | 1.5rem | Large cards, modals |
-| `--radius-full` | 9999px | Badges, avatars |
-
----
-
-## Shadows
-
-| Token | Usage |
-| --- | --- |
-| `--shadow-sm` | Subtle lift on cards at rest |
-| `--shadow-md` | Elevated cards, dropdowns |
-| `--shadow-lg` | Modals, toasts |
-| `--shadow-focus` | Orange focus ring (inputs, buttons) |
-| `--shadow-focus-danger` | Red focus ring (error state inputs) |
+<table style={{borderCollapse: 'collapse', fontSize: '0.875rem'}}>
+  <thead>
+    <tr style={{borderBottom: '2px solid #E5E5E5'}}>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Token</th>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Value</th>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Preview</th>
+      <th style={{padding: '10px 12px', textAlign: 'left', fontWeight: 600, color: '#525252'}}>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--radius-sm</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>0.375rem</td><td style={{padding: '8px 12px'}}><div style={{width: 36, height: 36, borderRadius: '0.375rem', background: '#FFF7ED', border: '2px solid #FB923C'}}/></td><td style={{padding: '8px 12px', color: '#525252'}}>Small badges, mini buttons</td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--radius-md</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>0.625rem</td><td style={{padding: '8px 12px'}}><div style={{width: 36, height: 36, borderRadius: '0.625rem', background: '#FFF7ED', border: '2px solid #FB923C'}}/></td><td style={{padding: '8px 12px', color: '#525252'}}>Inputs, selects</td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--radius-lg</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>0.875rem</td><td style={{padding: '8px 12px'}}><div style={{width: 36, height: 36, borderRadius: '0.875rem', background: '#FFF7ED', border: '2px solid #FB923C'}}/></td><td style={{padding: '8px 12px', color: '#525252'}}>Buttons, nav items</td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--radius-xl</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>1.125rem</td><td style={{padding: '8px 12px'}}><div style={{width: 36, height: 36, borderRadius: '1.125rem', background: '#FFF7ED', border: '2px solid #FB923C'}}/></td><td style={{padding: '8px 12px', color: '#525252'}}>Cards, panels</td></tr>
+    <tr style={{borderBottom: '1px solid #F5F5F5'}}><td style={{padding: '8px 12px'}}><code>--radius-2xl</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>1.5rem</td><td style={{padding: '8px 12px'}}><div style={{width: 36, height: 36, borderRadius: '1.5rem', background: '#FFF7ED', border: '2px solid #FB923C'}}/></td><td style={{padding: '8px 12px', color: '#525252'}}>Large cards, modals</td></tr>
+    <tr><td style={{padding: '8px 12px'}}><code>--radius-full</code></td><td style={{padding: '8px 12px', fontFamily: 'monospace'}}>9999px</td><td style={{padding: '8px 12px'}}><div style={{width: 36, height: 36, borderRadius: '9999px', background: '#FFF7ED', border: '2px solid #FB923C'}}/></td><td style={{padding: '8px 12px', color: '#525252'}}>Badges, avatars</td></tr>
+  </tbody>
+</table>
